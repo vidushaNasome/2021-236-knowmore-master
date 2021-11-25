@@ -1,0 +1,66 @@
+.rowC{
+    display:flex;
+    flex-direction:row;
+}
+.knowb{
+    background-color: #ffffff;
+    margin: 2% 1%;
+    width: auto;
+    align: center;
+    min-height: 60%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 700px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+
+}
+.knowb::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.other{
+    background-color: #ffffff;
+    margin: 2% 1%;
+    min-width: 15%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 700px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.other::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.search{
+    background-color: #ffffff;
+    margin: 2% 1%;
+    min-width: 28%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 700px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+}
+.search::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.div3{
+    display:flex;
+    flex-direction:row;
+
+}
+.div1{
+    display:flex;
+    flex-direction:row;
+
+}
+.div2{
+    display:flex;
+    flex-direction:row;
+
+}

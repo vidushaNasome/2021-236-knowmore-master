@@ -1,0 +1,133 @@
+.rowC{
+    display:flex;
+    flex-direction:row;
+}
+.VideoCluster{
+    background-color: #ffffff;
+    margin: 2% 1%;
+    padding:2%;
+    min-width: 50%;
+    align: center;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 600px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+}
+.VideoCluster::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.other12{
+    background-color: #faf4f4;
+    margin: 2% 1%;
+    padding:2%;
+    min-width: 22%;
+    border-radius: 25px;
+    position: sticky;
+    overflow-y: scroll;
+    height: 600px;
+    margin-right: 5%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+}
+.other12::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.Comments{
+    background-color: #ffffff;
+    margin: 2% 1%;
+    padding:2%;
+    min-width: 24%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 600px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.Comments::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.det{
+    background-color: #ecf2fc;
+    border-radius: 25px;
+    width: 40%;
+    padding: 2%;
+    margin: 2% 1%;
+    border-color: #92b4fa;
+    border-style: solid;
+    opacity: inherit;
+    font-family: "Open Sans", sans-serif;
+}
+.full_know{
+    background-color: #52525f;
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2% 1%;
+}
+.teacher_s{
+    background-color: #52525f;
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2% 1%;
+}
+.shcool_s{
+    background-color: #52525f;
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2% 1%;
+}
+.comments_s{
+    background-color: #ffd0be;
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2% 1%;
+}
+.main_s{
+    background-color: #4b4b65;
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2% 1%;
+}
+.button {
+    background-color: #6495ed	;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button5 {border-radius: 55%;}
+
+#btndelete{
+    background-color: #efabb8;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 1px 2px;
+    cursor: pointer;
+}
+.clusterHeading{
+    margin: 2%;
+    padding: 2%;
+    color: #4b4b65;
+}
+.custer_session{
+    background-color: #7c9af6;
+    margin: 1% 10%;
+    padding: 1%;
+    border-radius: 10px;
+}

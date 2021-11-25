@@ -1,0 +1,17 @@
+.shapes{
+
+}
+#desc {
+    position : absolute;
+    top: 5px;
+    left: 5px;
+}
+.canvas{
+    border-radius: 5px;
+    padding: 1%;
+    border-style: solid;
+    border-color: #282c34;
+    color: #282c34;
+    margin-top: 3%;
+
+}

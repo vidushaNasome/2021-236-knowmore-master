@@ -1,0 +1,101 @@
+#userimages5{
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.profile{
+
+}
+#CreateaPost{
+    background-color: #fdd4a2;
+    height: 260px;
+    padding: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 25px;
+}
+.Badges{
+    background-color: #e0ddda;
+    padding: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 25px;
+}
+#questions{
+    background-color: #b7caef;
+    height: 260px;
+    padding: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 25px;
+}
+#yourpost{
+    background-color: #8fb7fa;
+    padding: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 25px;
+}
+.mainall{
+
+}
+#details{
+    background-color: #d2e0fa;
+    height: 100px;
+    padding: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #8cb3fd;
+}
+.badgecolor{
+    background-color: #fca918;
+    margin: 2% 30%;
+    padding: 2%;
+    min-height: 150px;
+    border-radius: 25px;
+    font-family: "Droid Sans";
+    font-weight: bold;
+
+}
+.badgegreen{
+    background-color: #22f60a;
+    margin: 2% 30%;
+    padding: 2%;
+    min-height: 150px;
+    border-radius: 25px;
+    font-family: "Droid Sans";
+    font-weight: bold;
+
+}
+.badgered{
+    background-color: #fa2141;
+    margin: 2% 30%;
+    padding: 2%;
+    min-height: 150px;
+    border-radius: 25px;
+    font-family: "Droid Sans";
+    font-weight: bold;
+
+}
+.badgeblue{
+    background-color: #279bfa;
+    margin: 2% 30%;
+    padding: 2%;
+    min-height: 150px;
+    border-radius: 25px;
+    font-family: "Droid Sans";
+    font-weight: bold;
+
+}
+
+#userimages7{
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #4b4b65;
+}

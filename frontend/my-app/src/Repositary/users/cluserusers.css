@@ -1,0 +1,58 @@
+.back{
+    background-color: #0c2552;
+    border-radius: 40px;
+}
+#userimage_cluster{
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #61dafb;
+}
+
+#bt5{
+    background-color: #7b909a;
+    opacity: revert;
+    border-radius: 20px;
+    font-size: 10px;
+
+}
+.class_show_users{
+    margin: 2%;
+    min-width: 450px;
+}
+#bt6{
+    background-color: #7b909a;
+    opacity: revert;
+    border-radius: 20px;
+    font-size: 10px;
+
+}
+#bt_show{
+    margin-bottom: 5px;
+    background-color: #1eb4ff;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #7b909a;
+}
+.myclassmates{
+    background-color: #0597a1;
+    padding:2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    max-height: 300px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.myclassmates::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.users_all_view{
+    background-color: #60c9fd;
+    padding-top:2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 25%;
+}

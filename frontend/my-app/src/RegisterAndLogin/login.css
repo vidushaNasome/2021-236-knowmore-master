@@ -1,0 +1,90 @@
+#login{
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-left: 3%;
+    padding: 1%;
+    background-color: #2e4c5a;
+    border-radius: 25px;
+    color: #c2bebe;
+}
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.notlogindiv{
+    background-color: #fddfce;
+    margin: 5% 5% 1%;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.notlogindiv1{
+    background-color: #b9d7ef;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 15px;
+}
+.notlogin1{
+    padding: 2%;
+    margin-left:5% ;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+.image1234{
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+
+}
+#word1{
+    color: #0d0240;
+    font-family: "Droid Sans Mono Slashed";
+}
+#word2{
+    color: #021e55;
+    font-family: "Comic Sans MS";
+}
+#word3{
+    color: #662707;
+    font-family: "Comic Sans MS";
+}
+.newimage22{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+.ll1{
+    text-align: justify;
+    text-justify: inter-word;
+
+}
+.rr1{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.register{
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-left: 3%;
+    padding: 1%;
+    background-color: #2e4c5a;
+    border-radius: 25px;
+    color: #c2bebe;
+}
+#img_edit{
+
+}

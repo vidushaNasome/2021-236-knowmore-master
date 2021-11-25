@@ -1,0 +1,146 @@
+#nn{
+    color: #7b909a;
+    padding: 10px;
+}
+#nn:hover{
+    color: #1eb4ff;
+}
+#heading{
+    color: #576971;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 6px 0;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Open Sans", sans-serif;
+}
+#kk{
+    color: #7b909a;
+    padding: 10px;
+    margin-left: 2%;
+}
+#kk:hover{
+    color: #1eb4ff;
+}
+#logoutbtn{
+    background: #ffffff;
+    display: inline-block;
+    padding: 1px 1px;
+    border-radius: 4px;
+    color:#009cea;
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    margin-left: 10px;
+    height: 25px;
+    border-color: white;
+
+
+}
+#logged1{
+    display: flex;
+    flex-direction: row;
+    color: #1eb4ff;
+    font-size: 9px;
+    margin-left: 10px;
+    background-color: #eeeeee;
+    padding-left: 5px;
+    padding-right: 10px;
+    height: 50px;
+    border-radius: 4px;
+
+}
+#logged2{
+    display: flex;
+    flex-direction: row;
+    color: #1eb4ff;
+    font-size: 9px;
+    margin-left: 10px;
+    background-color: #eeeeee;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    height: 35px;
+    border-radius: 4px;
+
+}
+#overall{
+    background-color: crimson;
+    display: flex;
+    flex-direction: row;
+}
+#navd{
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 10%;
+    display:flex;
+    flex-direction:row;
+    padding-top: 1%;
+    background-color: white;
+    outline: none;
+    border-color: #657085;
+    box-shadow: 0 0 4px #657085;
+
+
+}
+#footer{
+
+}
+.rowC{
+    display:flex;
+    flex-direction:row;
+
+}
+.div1{
+    display:flex;
+    flex-direction:row;
+    margin-right: auto;
+    margin-left: 5%;
+
+}
+.div2{
+    display:flex;
+    flex-direction:row;
+}
+.div3{
+    display:flex;
+    flex-direction:row;
+    margin-bottom: 10%;
+    margin-left: auto;
+
+
+}
+#logoname{
+    color: #041958;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+#logo1{
+    width: 50px;
+    height: 40px;
+
+}
+#im_pro{
+    height:30px;
+    width:30px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+#reg_btn{
+    background: #fcfcfc;
+    display: inline-block;
+    padding: 1px 1px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    margin-left: 2%;
+    height: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #164db1;
+
+}

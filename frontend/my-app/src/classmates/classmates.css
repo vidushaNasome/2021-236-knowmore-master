@@ -1,0 +1,49 @@
+#userimage{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#bt3{
+    color: #0e1118;
+    background-color: #61dafb;
+    border-radius: 25px;
+    font-size: 10px;
+}
+.maindis{
+    display:flex;
+    flex-direction:row;
+}
+.right{
+    margin: 2% 1%;
+    min-width: 15%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 700px;
+    width: 30%;
+
+}
+.left{
+    margin: 2% 1%;
+    min-width: 28%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 700px;
+    width: 30%;
+}
+.middle{
+    margin: 2% 1%;
+    min-width: 28%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 700px;
+    width: 30%;
+}
+#bt9{
+    background-color: #2e4c5a;
+    opacity: revert;
+    border-radius: 20px;
+    font-size: 10px;
+    color:white;
+
+}

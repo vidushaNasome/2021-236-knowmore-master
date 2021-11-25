@@ -1,0 +1,13 @@
+.formheadline{
+    padding: 20%;
+    border-radius: 7px;
+    opacity: 90%;
+
+}
+.headingform{
+    width: 100%;
+    float:left;
+    border-color: #7b909a;
+    border-style: solid;
+    border-radius: 25px;
+}

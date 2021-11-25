@@ -1,0 +1,18 @@
+.mainpage1{
+    border-radius: 5px;
+    padding: 5%;
+    margin: 2%;
+    color: #282c34;
+
+}
+#word3{
+    color: #7b909a;
+}
+.post1{
+    background-color: #b3e2f8;
+    border-radius: 5px;
+    padding: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2%;
+}

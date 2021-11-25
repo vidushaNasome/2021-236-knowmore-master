@@ -1,0 +1,44 @@
+.feed1{
+    background-color: grey;
+    border-radius: 5px;
+    padding: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2%;
+
+}
+.feedDesign{
+    background-image: linear-gradient(to right, #f1b1b1 , #82e6e8);
+    border-radius: 5px;
+    padding: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2%;
+
+}
+.feedColor{
+    background-color: #b3e2f8;
+    border-radius: 5px;
+    padding: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2%;
+
+}
+.feedNo{
+    background-color: floralwhite;
+    border-radius: 5px;
+    padding: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2%;
+
+}
+.card96{
+    background-color: #ffc87c;
+    border-radius: 5px;
+    padding: 2%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 2%;
+}

@@ -1,0 +1,152 @@
+.formclass{
+    background-color: #d2e3ec;
+    padding: 2%;
+    border-radius: 7px;
+    opacity: 90%;
+    margin: 2%;
+    border-color:  #d2e3ec;
+
+
+}
+.rowC{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+}
+.addk{
+    background-color: #ffffff;
+    margin: 2% 1%;
+    min-width: 45%;
+    align: center;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 900px;
+
+}
+.conceptmap{
+    background-color: #ffffff;
+    margin: 2% ;
+    min-width: 45%;
+    align: center;
+    border-radius: 25px;
+    overflow-y: scroll;
+    height: 1900px;
+    padding: 2%;
+
+}
+.detdisplay{
+   /* border-color: #7b909a;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 2%;*/
+}
+.evaluatetm{
+    background-color: #d2e3ec;
+    border-radius: 10px;
+    padding: 2%;
+    max-height: 500px;
+    margin: 2%;
+}
+.final{
+    background-color: #eec34c;
+    padding:2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    /*height: 200px;*/
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    margin: 2%;
+}
+.final::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.btn-react{
+    padding: 1%;
+}
+
+.keywords{
+    background-color: #eec34c;
+    padding:2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    /*height: 150px;*/
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    margin: 2%;
+}
+.keywords::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.redundancy{
+    background-color: #eec34c;
+    padding:2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    /*height: 150px;*/
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    margin: 2%;
+}
+.redundancy::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.wordcount{
+    background-color: #fae7b2;
+    padding:2%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    /*height: 150px;*/
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    margin: 2%;
+}
+.wordcount::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.final{
+    background-color: #007bff;
+    padding: 1%;
+}
+#shownumers1{
+    color: darkcyan;
+    font-size: 76px;
+}
+#shownumers2{
+    color: darkred;
+    font-size: 76px;
+}
+.teachers_keywords{
+    background-color: #c5ddf6;
+    border-radius: 7px;
+    padding: 2%;
+    margin: 2%;
+}
+#btnsubmit_colt{
+    background-color: #f5187f;
+    margin: 1%;
+    width: 100px;
+    border-radius: 12%;
+    height: 70px;
+
+}
+#btnsubmit_cols{
+    background-color: #95047d;
+    margin: 1%;
+    width: 100px;
+    border-radius: 12%;
+    height: 70px;
+
+}
+#new_link{
+    background-color: #95047d;
+    margin: 1%;
+    padding: 1%;
+    width: 100px;
+    border-radius: 12%;
+    height: 70px;
+    color: white;
+}

@@ -1,0 +1,38 @@
+.Comments{
+    max-height: 750px;
+    max-width: 30%;
+    background-color: #ffffff;
+}
+
+.typeComment{
+    width: 800px;
+}
+
+#btncommentremove{
+    background-color: #efabb8;
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 1px 2px;
+    cursor: pointer;
+}
+
+.typeCommentNew{
+    width: 800px;
+}
+.typeCommentNew1{
+    width: 300px;
+}
+.typeCommentNewInteraction{
+    width: 800px;
+}
+.typeCommentNewInteraction1{
+    width: 600px;
+}
+.typeCommentNewInteraction11{
+    width: 200px;
+}
