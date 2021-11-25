@@ -97,6 +97,7 @@ Mysql
 •	Creating badge certificate and enabling sharing for selected Active students.
 
 
+#save in machine python files
 #C:\Users\Acer\AppData\Local\Programs\Python\Python39\Lib\site-packages 
 ***venv
 
