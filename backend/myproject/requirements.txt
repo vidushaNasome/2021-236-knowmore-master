@@ -7,3 +7,4 @@ sklearn
 pytesseract
 pymongo
 nltk
+whitenoise

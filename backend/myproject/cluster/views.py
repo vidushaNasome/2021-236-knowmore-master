@@ -3,13 +3,13 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets, permissions
 
-from .models import Cluster, VideoCluster, TeacherVideo
-from .serializer import ClusterSerializer, VideoSerializer, TeacherVideoSerializer
+from .models import  VideoCluster, TeacherVideo
+from .serializer import  VideoSerializer, TeacherVideoSerializer
 
 
-class ClusterViewSet(viewsets.ModelViewSet):
+"""class ClusterViewSet(viewsets.ModelViewSet):
     queryset = Cluster.objects.all()
-    serializer_class = ClusterSerializer
+    serializer_class = ClusterSerializer"""
 
 class VideoViewSet(viewsets.ModelViewSet):
     #queryset = VideoCluster.objects.all()
