@@ -30,24 +30,3 @@ class ShareKnowledge(models.Model):
     def __str__(self):
         return self.share_content
 
-# class Rank(models.Model):
-#     Label = models.CharField(max_length=5000, blank=True, null=True)
-#     paragraph_count = models.IntegerField(blank=False, null=False, default=0)
-#     sentence_count = models.IntegerField(blank=False, null=False, default=0)
-#     sentensePerpara = models.IntegerField(blank=False, null=False, default=0)
-#     nouns = models.IntegerField(blank=False, null=False, default=0)
-#     verbs = models.IntegerField(blank=False, null=False, default=0)
-#     adverbs = models.IntegerField(blank=False, null=False, default=0)
-#     adjectives = models.IntegerField(blank=False, null=False, default=0)
-#     stopwords = models.IntegerField(blank=False, null=False, default=0)
-#     badgeCite_count = models.IntegerField(blank=False, null=False, default=0)
-#     memberSince = models.IntegerField(blank=False, null=False, default=0)
-#     pastReviews = models.IntegerField(blank=False, null=False, default=0)
-#     knid = models.IntegerField(blank=False, null=False, default=0)
-#     userid = models.IntegerField(blank=True, null=True, default=0)
-#     sessionid = models.IntegerField(blank=True, null=True, default=0)
-#     clusterid = models.IntegerField(blank=True, null=True, default=0)
-#     topicid = models.IntegerField(blank=True, null=True, default=0)
-#
-#     def __str__(self):
-#         return self.Label
