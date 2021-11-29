@@ -3,13 +3,13 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets, permissions
 
-from .models import Repositary, CreatedCluster, Createdtopic, CreatedSession
-from .serializer import RepositarySerializer, CreatedClusterSerializer, CreatedTopicSerializer, CreatedSessionSerializer
+from .models import CreatedCluster, Createdtopic, CreatedSession
+from .serializer import CreatedClusterSerializer, CreatedTopicSerializer, CreatedSessionSerializer
 
 
-class RepositaryViewSet(viewsets.ModelViewSet):
+"""class RepositaryViewSet(viewsets.ModelViewSet):
     queryset = Repositary.objects.all()
-    serializer_class = RepositarySerializer
+    serializer_class = RepositarySerializer"""
 
 
 class CreatedClusterViewSet(viewsets.ModelViewSet):

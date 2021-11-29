@@ -1,13 +1,13 @@
 # categories serializer
 from rest_framework import serializers
 
-from .models import Repositary, CreatedCluster, Createdtopic, CreatedSession
+from .models import CreatedCluster, Createdtopic, CreatedSession
 
 
-class RepositarySerializer(serializers.ModelSerializer):
+"""class RepositarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Repositary
-        fields = '__all__'
+        fields = '__all__'"""
 
 class CreatedClusterSerializer(serializers.ModelSerializer):
     class Meta:
