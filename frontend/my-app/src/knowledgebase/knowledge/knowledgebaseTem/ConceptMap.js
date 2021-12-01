@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import "./styleKb.css";
 import Displayshapes from "../conceptmap/Displayshapes";
-import DisplayShapetwo from "../conceptmap/DisplayShapetwo";
-import DisplayShapeTwo from "../conceptmap/DisplayShapetwo";
-import Connectors from "../conceptmap/Connectors";
+//import DisplayShapetwo from "../conceptmap/DisplayShapetwo";
+//import DisplayShapeTwo from "../conceptmap/DisplayShapetwo";
+//import Connectors from "../conceptmap/Connectors";
 import {knowledgebaseAPI, knowledgebasePostParaAPI} from "../../../configs/config"
 import {categoriesAPI} from "../../../configs/config";
 import axios from "axios";
-import ComponentHeading from "../components/ComponentHeading";
+//import ComponentHeading from "../components/ComponentHeading";
 import {Button, Form} from "react-bootstrap";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";

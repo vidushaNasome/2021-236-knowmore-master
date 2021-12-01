@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {Button, Form} from "react-bootstrap";
 import '../com_stl.css';
-import ComponentHeading from "../../../knowledgebase/knowledge/components/ComponentHeading";
 import axios from "axios";
-//import {commentsAPI} from "../../configs/config";
+
 import {
     FaThumbsUp,
     FaRegThumbsDown,
@@ -35,11 +34,6 @@ import PropTypes from "prop-types";
 import "./Comments.css";
 import {f_s_angry_count, f_s_cry_count, f_s_heart_count, f_s_like_count} from "../../../configs/config2"
 
-/*
-* Bhagya Coding..
-* comments file
-* form11..
-* */
 
 class Comments extends Component {
 
@@ -55,7 +49,7 @@ class Comments extends Component {
         }
     }
     constructor(props) {
-        //data id
+       
         super(props);
 
         this.state= {
@@ -158,7 +152,7 @@ class Comments extends Component {
             //by session
 
             //by session user
-           // alert(userreactionAPI+'?sessid='+this.props.session_id+'&userid='+sessionStorage.getItem('studentId'))
+          
             axios.get(userreactionAPI+'?sessid='+this.props.session_id+'&userid='+sessionStorage.getItem('studentId'))
                 .then(response => {
 
@@ -202,7 +196,6 @@ class Comments extends Component {
             axios.get(addsessioncommentsAPI+'?sessid='+this.props.session_id)
                 .then(response => {
                     this.setState({commentsdata: response.data})
-                    //console.log('display video')
                     console.log(this.state.videodata)
 
                 })
@@ -240,7 +233,6 @@ class Comments extends Component {
             })
                 .then(response=>{
                     console.log(response);
-                    //alert('Success')
                     this.retrievecomments()
                     window.location.reload();
 

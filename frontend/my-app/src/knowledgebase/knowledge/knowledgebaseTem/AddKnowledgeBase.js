@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Form} from "react-bootstrap";
-import ComponentHeading from "../components/ComponentHeading";
 import "./styleKb.css";
 import PropTypes from "prop-types";
-import DisplayaddedKnoel from "../components/DisplayaddedKnoel";
 import axios from "axios";
 import {knowledgebaseAPI, knowledgebasePostParaAPI, topicmapscore} from "../../../configs/config";
 import {Link} from "react-router-dom";
@@ -28,7 +26,7 @@ class AddKnowledgeBase extends Component {
 
 
     constructor(props) {
-        //data id
+       
         super(props);
         this.state={
             session_id: this.props.session_id,
@@ -56,7 +54,6 @@ class AddKnowledgeBase extends Component {
         this.onSubmit=this.onSubmit.bind(this);
         this.callbackFunction=this.callbackFunction.bind(this);
         this.handleInputChange=this.handleInputChange.bind(this);
-       // this.putmethodforopicmap=this.putmethodforopicmap.bind(this);
         this.checking_detailsexisted=this.checking_detailsexisted.bind(this);
         this.onFileChange=this.onFileChange.bind(this);
         this.handleInputChange1 = this.handleInputChange1.bind(this);
@@ -93,7 +90,7 @@ class AddKnowledgeBase extends Component {
 
 
     checking_detailsexisted(){
-        //alert(this.state.session_id)
+       
         axios.get(knowledgebasePostParaAPI+'?sid='+this.state.session_id+'&stid='+sessionStorage.getItem('studentId'))
             .then(response => {
                 this.setState({paradata: response.data});
@@ -102,9 +99,6 @@ class AddKnowledgeBase extends Component {
 
                 this.setState({paragraph: this.state.paradata[0].details});
                 this.setState({det_id: this.state.paradata[0].id});
-                //this.setState({student_score: this.state.paradata[0].studentscore});
-                //this.setState({teachers_score: this.state.paradata[0].teacherscore});
-
                 this.setState({addedCheck: true})
             })
             .catch(function (error) {
@@ -134,7 +128,6 @@ class AddKnowledgeBase extends Component {
                 axios.put(knowledgebasePostParaAPI + this.state.det_id+'/', {
                     details: this.state.paragraph
                 }).then(function (response) {
-                    //console.log(response);
                     alert('Successfully Updated. Proceed with Topic Map Genaration.')
                     window.location.reload();
 

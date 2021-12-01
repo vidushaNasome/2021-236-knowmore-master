@@ -3,7 +3,7 @@ import "./style.css";
 import Comments from "./comments/Comments/Comments";
 import VideoCluster from "./Video/VideoCluster";
 import Other from "./Other/Other";
-import KnowledgeBaseTmp from "../knowledgebase/knowledge/KnowledgeBaseTmp";
+//import KnowledgeBaseTmp from "../knowledgebase/knowledge/KnowledgeBaseTmp";
 import AddKnowledgeBase from "../knowledgebase/knowledge/knowledgebaseTem/AddKnowledgeBase";
 import ConceptMap from "../knowledgebase/knowledge/knowledgebaseTem/ConceptMap";
 import qs from "query-string";

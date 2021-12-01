@@ -16,7 +16,6 @@ class Bookmarks extends Component {
 
     componentDidMount() {
         axios.get(display_bookmarks+'?userid='+sessionStorage.getItem('studentId'))
-            //alert(all_bookmarks+'&userid='+sessionStorage.getItem('studentId'))
             .then(response => {
                 console.log('success')
                 console.log(response)

@@ -12,7 +12,6 @@ import {Button, Card, Form} from "react-bootstrap";
 import Badge from "../../badgeCetificate/Badge";
 import {Link} from "react-router-dom";
 import not from "../../../Images/Icons_navigation/not.png";
-//import * as cluster from "cluster";
 import Comments from "../Comments/Comments";
 import "./scoreboard.css";
 import imagegold from '../../images/gold cup.jpg'
@@ -32,7 +31,6 @@ class MostInteractive extends Component {
             classlistf:[],
             display:false,
             cid:qs.parse(this.props.location.search, { ignoreQueryPrefix: true }).cid,
-            //userid:1234,
             tid:qs.parse(this.props.location.search, { ignoreQueryPrefix: true }).tid,
             userid:'',
             clusterid:'',
@@ -40,12 +38,6 @@ class MostInteractive extends Component {
             topicid:'',
             Knowledgebase:null,
             AdditionalLinks:'',
-            //AdditionalLinksCount:null,
-            //Comments:'',
-            //CommentsCount:null,
-            //ReactionsLike:1,
-            //ReactionsLove:null,
-            //ReactionsCry:null,
             NoOfPosts:'',
             Reactions:'',
             Replies:'',
@@ -76,7 +68,6 @@ class MostInteractive extends Component {
 
     componentDidMount() {
 
-        //alert(repositaryclustercreationAPI+this.props.cid)
 
         axios.get( repositaryclustercreationAPI+this.state.cid)
             .then(response => {
@@ -126,12 +117,8 @@ class MostInteractive extends Component {
                 clusterid:this.state.cid,
                 sessionid:this.state.sessionid,
                 topicid:this.state.tid,
-                //Comments: this.state.Comments,
                 AdditionalLinks: this.state.AdditionalLinks,
                 Knowledgebase: this.state.Knowledgebase,
-                // AdditionalLinksCount: this.state.AdditionalLinksCount,
-                //CommentsCount: this.state.CommentsCount,
-                //ReactionsLike: this.state.ReactionsLike,
                 NoOfPosts: this.state.NoOfPosts,
                 Reactions: this.state.Reactions,
                 Replies: this.state.Replies,
@@ -190,7 +177,6 @@ class MostInteractive extends Component {
         }else{
             this.setState({ update_inter: true})
             this.setState({cal_inter: false})
-            //this.setState({addeddetloading: false})
 
         }
 
@@ -203,7 +189,6 @@ class MostInteractive extends Component {
         }else{
             this.setState({cal_inter: true})
             this.setState({update_inter: false})
-            //this.setState({addeddetloading: false})
         }
 
     }
@@ -223,8 +208,6 @@ class MostInteractive extends Component {
                 console.log(error);
 
             })
-
-        //alert(this.state.mostactiveforcluster)
 
         if(this.state.mostactiveforcluster != null && this.state.mostactiveforcluster != undefined){
             this.state.mostactiveforcluster.forEach(function(item) {
@@ -284,10 +267,7 @@ class MostInteractive extends Component {
         await axios.get(commentsAPI+'?stid='+sid+'&ssid='+this.state.cid )
             .then(response => {
                 returnstate=response.data[0]
-                //console.log('returnstate')
-                // console.log(returnstate[0])
-
-
+                
 
             })
             .catch(function (error) {

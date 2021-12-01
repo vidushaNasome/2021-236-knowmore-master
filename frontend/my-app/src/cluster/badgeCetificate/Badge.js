@@ -39,8 +39,7 @@ export class Badge extends Component{
 
     onSubmit(e){
         e.preventDefault();
-        //this.name=this.state.name;
-        //alert(this.state.theme)
+       
         axios.post(badgenewsfeed, {
             sessionid: this.props.sessionid,
             studentid: this.props.studentid,

@@ -3,7 +3,7 @@ import "./cluserusers.css";
 import axios from "axios";
 import {DisplayStudentsAPI, myclassmatesAPI, repositaryclustercreationAPI} from "../../configs/config";
 import PropTypes from "prop-types";
-import ComponentHeading from "../../knowledgebase/knowledge/components/ComponentHeading";
+//import ComponentHeading from "../../knowledgebase/knowledge/components/ComponentHeading";
 import {Form} from "react-bootstrap";
 import {FaUserFriends} from "react-icons/fa"
 

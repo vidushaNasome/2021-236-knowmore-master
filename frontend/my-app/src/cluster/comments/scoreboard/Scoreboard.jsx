@@ -20,7 +20,6 @@ import {Button, Card, Form} from "react-bootstrap";
 import {Badge} from "../../badgeCetificate/Badge";
 import {Link} from "react-router-dom";
 import not from "../../../Images/Icons_navigation/not.png";
-//import * as cluster from "cluster";
 import Comments from "../Comments/Comments";
 import "./scoreboard.css";
 import imagegold from '../../images/gold cup.jpg'
@@ -72,7 +71,6 @@ class Scoreboard extends Component {
         this.handleInputChange=this.handleInputChange.bind(this);
         this.onSubmit=this.onSubmit.bind(this);
         this.like=this.like.bind(this);
-        //this.retrieveuserdetails = this.retrieveuserdetails.bind(this);
         this.retrieveactivestatus=this.retrieveactivestatus.bind(this);
         this.detailsactive=this.detailsactive.bind(this);
         this.putmethodforactivestatus=this.putmethodforactivestatus.bind(this);
@@ -126,7 +124,6 @@ class Scoreboard extends Component {
         //Retriving all the data
 
         //Reactions -- 1
-       // alert(model_reaction+'?ssid='+this.state.sessionid+'&userid='+sessionStorage.getItem('studentId'))
         axios.get(model_reaction+'?ssid='+this.state.sessionid+'&userid='+sessionStorage.getItem('studentId'))
             .then(response => {
                 this.setState({Reactions: response.data.reactions})
@@ -156,7 +153,6 @@ class Scoreboard extends Component {
             })
 
         //knowledgebase // knowledgebase --4
-        //alert(model_sharing_kb+'?ssid='+this.state.sessionid+'&userid='+sessionStorage.getItem('studentId'))
         axios.get(model_sharing_kb+'?ssid='+this.state.sessionid+'&userid='+sessionStorage.getItem('studentId'))
             .then(response => {
                 this.setState({Sharing: response.data.knowledgebase})
@@ -182,9 +178,7 @@ class Scoreboard extends Component {
     }
 
     handleInputChange(event) {
-        /*this.setState({
-            [event.target.name]: event.target.value
-        })*/
+       
     }
 
     onSubmit = (e,id) => {
@@ -210,7 +204,6 @@ class Scoreboard extends Component {
             })
                 .then(response=>{
                     console.log(response);
-                    //alert('Successfully Added Interaction details. Proceed with the score.')
                     window.location.reload();
 
                 })
@@ -225,7 +218,7 @@ class Scoreboard extends Component {
     }
 
     like() {
-        //alert('Like disp')
+       
         this.setState({ReactionsLike: 0})
 
 
