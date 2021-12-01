@@ -10,6 +10,8 @@ from .views_getsessiondata import filter_session_reaction_heart_count, filter_se
     filter_session_additionallinks_for_each_user, filter_session_comments_for_each_user, \
     filter_session_videoview_for_each_user
 
+from .login_view import jwt_token_login
+
 router = routers.DefaultRouter()
 router.register('Categories', CategoriesViewSet, 'Categories')
 router.register('StudentsAsUser', StudentAsUserViewSet, 'StudentsAsUser')
@@ -34,5 +36,7 @@ urlpatterns = [
     path('user_comments', filter_session_comments_for_each_user, name='user_comments'),
     # path('user_knowledgebase',filter_session_knowledgebase_for_each_user, name='user_knowledgebase'),
     path('user_videoview', filter_session_videoview_for_each_user, name='user_videoview'),
+    path('token', jwt_token_login, name='token'),
+
 
 ]

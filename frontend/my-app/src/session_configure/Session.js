@@ -1,6 +1,6 @@
 import React from "react";
 import { useJwt } from "react-jwt";
-const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50SWQiOiIxIiwiaW1hZ2UiOiJ0dHA6Ly8xMjcuMC4wLjE6ODAwMC9tZWRpYS9Vc2VyaW1hZ2VzL3ZpZHVzaGFfd0tLUk1pOC5KUEciLCJVc2VybmFtZSI6InZpZHVzaGEifQ.orZb1v17epAOCnBNQ1igKY6Ya6qED-gkH21ewTnmR2A";
+const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50SWQiOjEsImltYWdlIjoiXCJVc2VyaW1hZ2VzL3ZpZHVzaGFfd0tLUk1pOC5KUEdcIiIsIlVzZXJuYW1lIjoidmlkdXNoYSJ9.MCcELHq3L33Gkn93OkSmpO7YWPFPUCvd_xR3r39XUus";
 
 const Session = () => {
   const { decodedToken, isExpired } = useJwt(token);
