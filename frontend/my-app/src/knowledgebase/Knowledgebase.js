@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Search from "./search/Search";
 import OtherKnow from "./otherknow/OtherKnow";
 import "./style_know.css";
-import KnowledgeBaseTmp from "./knowledge/KnowledgeBaseTmp";
 
 class Knowledgebase extends Component {
     render() {
