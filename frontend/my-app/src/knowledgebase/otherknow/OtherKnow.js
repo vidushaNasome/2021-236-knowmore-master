@@ -91,7 +91,8 @@ class OtherKnow extends Component {
                                 name="keyword"
 
                             />
-                            <Button id="btnSubmit" type="submit"><FaSearch  color="white" fontSize="1.0em"/></Button><Link to={"/notifications"} style={ButtonStyling}><img src="https://img.icons8.com/color/34/000000/repository.png"/></Link>
+                            <Button id="btnSubmit" type="submit"><FaSearch  color="white" fontSize="1.0em"/></Button>
+                            <Link to={"/savedknowledgebases"} style={ButtonStyling}><img src="https://img.icons8.com/color/34/000000/repository.png"/></Link>
 
                         </div>
                     </form>

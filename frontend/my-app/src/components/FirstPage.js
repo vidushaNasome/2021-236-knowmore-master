@@ -18,6 +18,7 @@ import TeacherLogin from "../RegisterAndLogin/TeacherLogin";
 import Schoollogin from "../RegisterAndLogin/Schoollogin";
 import TeacherRegister from "../RegisterAndLogin/TeacherRegister";
 import SchoolRegister from "../RegisterAndLogin/SchoolRegister";
+import Displayadded from "../knowledgebase/search/Displayadded"
 import logo from "../Images/ll1.JPG";
 import Notifications from "../navigation/Notifications";
 import Login from "../RegisterAndLogin/Login";
@@ -42,6 +43,7 @@ class FirstPage extends Component {
                         <Route  path="/knowledgebaseadd"   component={KnowledgeBaseTem}/>
                         <Route  path="/scoreboard"   component={Scoreboard}/>
                         <Route  path="/slidesshow"   component={Slidesshow}/>
+                        <Route  path="/savedknowledgebases"   component={Displayadded}/>
                         <Route  path="/teacherlogin"   component={TeacherLogin}/>
                         <Route  path="/schoollogin"   component={Schoollogin}/>
                         <Route  path="/teacherregister"   component={TeacherRegister}/>
@@ -49,6 +51,7 @@ class FirstPage extends Component {
                         <Route  path="/notifications"   component={Notifications}/>
                         <Route  path="/login"   component={Login}/>
                         <Route  path="/register"   component={Register}/>
+                        
                     </Switch>
 
                 </Router>
