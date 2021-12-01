@@ -6,6 +6,7 @@ import {DisplayStudentsAPI} from "../configs/config";
 import FirstPage from "../components/FirstPage";
 import MainPage from "../components/MainPage";
 import logo from "../Images/ll1.JPG";
+import Session from "../session_configure/Session";
 
 class Login extends Component {
 
@@ -17,11 +18,14 @@ class Login extends Component {
             password:"",
             errors:{},
             isLoading:false,
-            meStudent:{}
+            meStudent:{},
+            session:"",
         }
 
         this.OnChange=this.OnChange.bind(this);
         this.onSubmit=this.onSubmit.bind(this);
+        this.showsession=this.showsession.bind(this);
+        
 
 
     }
@@ -30,9 +34,7 @@ class Login extends Component {
         this.name = this.state.name;
         this.password = this.state.password;
 
-        //alert(this.name+this.password)
-        ///?name=Ben&pw=1234
-       // alert(DisplayStudentsAPI+'?name='+this.name+'&pw='+this.password)
+     
         await axios.get(DisplayStudentsAPI+'?name='+this.name+'&pw='+this.password)
             .then(response => {
                 this.setState({ MeStudent: response.data});
@@ -64,9 +66,25 @@ class Login extends Component {
         this.setState({[e.target.name]:e.target.value})
     }
 
+    showsession(){
+        alert('display')
+        this.setState({session: true})
+    }
+
     render() {
         return (
             <div id="login">
+
+                <div>
+                    <button onClick={this.showsession}>xx</button>
+                    {(this.state.session == true)?
+                    <div>
+                        <Session/>
+                    </div>:
+                    null
+                    }
+                </div>
+
                 { //Check if message failed
                                     (sessionStorage.getItem('studentId') == null)
                                         ? <div>
