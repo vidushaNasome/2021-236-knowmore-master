@@ -23,25 +23,10 @@ Develop a social media based, web component for generating user notes from a lec
 Develop a social media based, web component to evaluate student’s engagement by students’ likes, reads, replies and watching videos durations. The component predicts the Student Test marks for a session based on interaction.
 
 
-###Member Details###
+###Developer Details###
 
-Member 01(L):
-IT18011494 Nasome P.V.R.D.V.
+Nasome P.V.R.D.V. ##Vidusha Nasome
 
-Member 02:
-IT18044096 Malavige M.O.D
-
-Member 03:
-IT18070590 COSTA M.M.H
-
-Member 04:
-IT18028256 Jayasinghe M.A.D.B.K.
-
-Supervisor :
-Ms. Uthpala Samarakoon
-
-Co-Supervisor:
-Dr. Anuradha Karunasena
 
 
 
@@ -62,14 +47,14 @@ Mysql
 
 ###Member Functionalities###
 
-#Member 1 IT18011494 Nasome P.V.R.D.V.#
+#ML Feature 1
 
 •	Register (with three Account types)
 -Student, Teacher, School/Institute, Teacher under a School/Institute
 •	Manage My profile with posts sharing.
 •	Topic map component, which is Automatically Text analyzing, summarization using NLP/ML based on lecturers shared video content and Knowledge base.
 
-#Member 2 IT18044096 Malavige M.O.D#
+#ML Feature 2
 
 •	Learning repository creation (with clusters owners’ privileges)
 •	Recommended clusters.
@@ -79,7 +64,7 @@ Mysql
 •	Book marking and sharing content.
 •	Access management for content. 
 
-#Member 3 IT18070590 COSTA M.M.H#
+#ML Feature 3
 
 •	Add, Manage, Recommend classmates.
 •	Lecturers video uploading component.
@@ -89,7 +74,7 @@ Mysql
 •	Students users notes(slides) displaying as side bar component.
 •	Enabling sharing option.
 
-#Member 4 IT18028256 Jayasinghe M.A.D.B.K.#
+#ML Feature 4
 
 •	Notifications, News Feed management.
 •	Students adding comments, likes, imogies reactions, replies component.
