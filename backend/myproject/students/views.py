@@ -23,8 +23,20 @@ class StudentAsUserViewSet(viewsets.ModelViewSet):
         queryset = StudentsAsUser.objects.all()
         name = self.request.query_params.get('name', None)
         password = self.request.query_params.get('pw', None)
+        #id = self.request.query_params.get('id',None)
+
         if name is not None:
             queryset = queryset.filter(name=name, password=password)
+
+        #elif id is not None:
+         #   print('hello.....inside views......')
+          #  print(id)
+
+           # queryset = queryset.filter(id=id)
+
+            #for i in queryset:
+             #   return i
+
         return queryset
 
 

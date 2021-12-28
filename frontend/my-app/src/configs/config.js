@@ -1,3 +1,6 @@
+import axios from "axios";
+import { isExpired, decodeToken } from "react-jwt";
+
 const apiBaseUrl = "http://127.0.0.1:8000/";
 
 // APIs
@@ -13,6 +16,9 @@ const topicmapscore = `${apiBaseUrl}knowledgebase_add/knowledgetopicmapkeywords/
 
 //Students
 const DisplayStudentsAPI = `${apiBaseUrl}students/StudentsAsUser/`;
+
+const DisplayStudent_ch = `${apiBaseUrl}students/retrieve_clusters`;
+
 const myclassmatesAPI = `${apiBaseUrl}students/Myclassmates/`;
 const commentsAPI = `${apiBaseUrl}students/ModelOutput/`;
 const addsessioncommentsAPI = `${apiBaseUrl}students/AddComments/`;
@@ -20,6 +26,9 @@ const additionallinkAPI = `${apiBaseUrl}students/AdditionalLink/`;
 
 const userreactionAPI = `${apiBaseUrl}students/Reaction/`;
 
+//token and students details retrieve
+const tokenStudentAPI = `${apiBaseUrl}students/token`;
+const gettoken = `${apiBaseUrl}students/token_retrieve`;
 
 //teachers
 const DisplayTeachersAPI = `${apiBaseUrl}teachers/teachers/`;
@@ -63,6 +72,56 @@ const all_bookmarks= `${apiBaseUrl}search/bookmarked`;
 
 const dispalydatafile=`${apiBaseUrl}media/videos/`;
 
+//students/validation?id=2&sct=90832
+const tokenValidation=`${apiBaseUrl}students/validation`;
+
+//const accesstoken ='abcdefg';
+
+const decode_t = decodeToken(sessionStorage.getItem('token'));
+
+let accesstoken='0000';
+
+if(decode_t !== null){
+    accesstoken =decodeToken(sessionStorage.getItem('token')).secret;
+
+}else{
+
+};
+
+const authAxios=axios.create({
+    baseURL:apiBaseUrl,
+    headers:{
+        'Authorization': `${accesstoken}`
+    }
+})
+
+function validationfunction(){
+
+    if(decodeToken(sessionStorage.getItem('token')) !== null){
+
+        authAxios.get(tokenValidation+'?id='+decodeToken(sessionStorage.getItem('token')).studentId)
+        .then(response => {
+         console.log(response);
+         return response;
+     
+        })
+        .catch(function (error) {
+            console.log(error);
+ 
+ 
+        })
+
+      }
+
+
+    return 5;
+}
+
+let validity= validationfunction();
+
+
+
+
 export{
     categoriesAPI,
     knowledgebaseAPI,
@@ -93,5 +152,11 @@ export{
     search_all,
     search_bookmarking,
     all_bookmarks,
-    display_bookmarks
+    display_bookmarks,
+    tokenStudentAPI,
+    tokenValidation,
+    authAxios,
+    validity,
+    gettoken,
+    DisplayStudent_ch,
 }

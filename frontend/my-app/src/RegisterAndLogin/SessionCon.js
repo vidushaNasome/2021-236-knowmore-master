@@ -9,6 +9,7 @@ class SessionCon extends React.Component {
             const credentials1 = JSON.parse(JSON.stringify(window.sessionStorage.getItem('studentId')));
             const credentials2 = JSON.parse(JSON.stringify(window.sessionStorage.getItem('image')));
             const credentials3 = JSON.parse(JSON.stringify(window.sessionStorage.getItem('Username')));
+            const credentials_1 = JSON.parse(JSON.stringify(window.sessionStorage.getItem('token')));
 
             const credentials4 = JSON.parse(JSON.stringify(window.sessionStorage.getItem('teacherId')));
             const credentials5 = JSON.parse(JSON.stringify(window.sessionStorage.getItem('schoolId')));
@@ -24,6 +25,9 @@ class SessionCon extends React.Component {
 
                 window.localStorage.setItem('CREDENTIALS_SHARING3', JSON.stringify({ credentials3 }));
                 window.localStorage.removeItem('CREDENTIALS_SHARING3');
+
+                window.localStorage.setItem('CREDENTIALS_SHARING_1', JSON.stringify({ credentials_1 }));
+                window.localStorage.removeItem('CREDENTIALS_SHARING_1');
 
 
             }
@@ -87,6 +91,13 @@ class SessionCon extends React.Component {
                 window.sessionStorage.setItem('schoolId', obj1.credentials5);
                 window.location.reload(false);
             }
+            if(event.key === 'CREDENTIALS_SHARING_1' && credentials_1 === null){
+                //console.log("if 4"+credentials2);
+                var obj1 = JSON.parse(event.newValue);
+                window.sessionStorage.setItem('token', obj1.credentials_1);
+                window.location.reload(false);
+            }
+
 
 
             //Removing Sessions
@@ -96,6 +107,7 @@ class SessionCon extends React.Component {
                 window.sessionStorage.removeItem('studentId');
                 window.sessionStorage.removeItem('image');
                 window.sessionStorage.removeItem('Username');
+                window.sessionStorage.removeItem('token');
                 window.location.reload(false);
 
             }

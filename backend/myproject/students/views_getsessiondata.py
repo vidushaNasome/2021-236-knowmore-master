@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 
-from .models import Reaction, AdditionalLink, AddComments, Fullvideo
+from .models import Reaction, AdditionalLink, AddComments, Fullvideo, StudentsAsUser
 
 
 # Reactions Counts
@@ -103,3 +103,21 @@ def filter_session_videoview_for_each_user(request, ssid=None, userid=None):
         print('Not Found')
     else:
         return JsonResponse({'videoview': 1})
+
+
+#clusters recieved
+@api_view(['GET'])
+def user_specified_clusters(request, id=None):
+    sid = request.GET.get('id')
+
+    SC=request.META['HTTP_AUTHORIZATION'] 
+
+    queryset = StudentsAsUser.objects.filter(id=sid,secret=SC)
+
+    for i in queryset:
+        return JsonResponse({'clusters': i.clusterIds})
+        #   return i
+        #print(results)
+    return JsonResponse({'clusters': "0"})
+
+

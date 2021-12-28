@@ -8,13 +8,15 @@ import LogginCheckPage from "./LogginCheckPage";
 import "./App.css";
 import "./background.css";
 import SessionCon from "./RegisterAndLogin/SessionCon";
+import "./configs/config_m";
+
 
 
 function App() {
   return (
     <div className="background">
         <SessionCon/>
-        <LogginCheckPage/>
+        <LogginCheckPage/>    
         <br/>
         <br/>
 

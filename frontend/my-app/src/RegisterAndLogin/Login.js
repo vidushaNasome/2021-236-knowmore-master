@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBModalFooter } from 'mdbreact';
 import './login.css';
 import axios from "axios";
 import {DisplayStudentsAPI} from "../configs/config";
 import FirstPage from "../components/FirstPage";
 import MainPage from "../components/MainPage";
-import logo from "../Images/ll1.JPG";
-import Session from "../session_configure/Session";
+import {tokenStudentAPI} from "../configs/config";
+//import {authAxios} from "../configs/config";
+import { isExpired, decodeToken } from "react-jwt";
+//import {tokenValidation} from '../configs/config'; 
+
 
 class Login extends Component {
 
@@ -20,11 +22,16 @@ class Login extends Component {
             isLoading:false,
             meStudent:{},
             session:"",
+        
+            
         }
 
         this.OnChange=this.OnChange.bind(this);
         this.onSubmit=this.onSubmit.bind(this);
-        this.showsession=this.showsession.bind(this);
+        //this.showsession=this.showsession.bind(this);
+
+      
+
         
 
 
@@ -34,8 +41,37 @@ class Login extends Component {
         this.name = this.state.name;
         this.password = this.state.password;
 
+        await axios.get(tokenStudentAPI+'?name='+this.name+'&pw='+this.password)
+            .then(response => {
+                console.log(response.data.token);
+                //this.setState({ MeStudent: response.data});
+                //console.log(this.state.MeStudent)
+                if(response.data.token !== 'Incorrect Username or Password') {
+                    sessionStorage.setItem("token", response.data.token)
+                    const decode_t = decodeToken(response.data.token);
+                    sessionStorage.setItem("Username", decode_t.Username)
+
+                    const str =decode_t.image
+                    console.log(str)
+                    sessionStorage.setItem("image", str.slice(1,-1))
+                    sessionStorage.setItem("studentId", decode_t.studentId)
+                    window.location.reload();
+
+
+                }else{
+                    alert('Incorrect Username or Password!');
+                }
+
+
+            })
+            .catch(function (error) {
+                console.log(error);
+
+
+            })
+
      
-        await axios.get(DisplayStudentsAPI+'?name='+this.name+'&pw='+this.password)
+       /* await axios.get(DisplayStudentsAPI+'?name='+this.name+'&pw='+this.password)
             .then(response => {
                 this.setState({ MeStudent: response.data});
                 console.log(this.state.MeStudent)
@@ -55,7 +91,7 @@ class Login extends Component {
                 console.log(error);
 
 
-            })
+            })*/
 
         window.localStorage.setItem('REQUESTING_SHARED_CREDENTIALS', Date.now().toString())
         window.localStorage.removeItem('REQUESTING_SHARED_CREDENTIALS')
@@ -66,27 +102,28 @@ class Login extends Component {
         this.setState({[e.target.name]:e.target.value})
     }
 
-    showsession(){
+    /*showsession(){
         alert('display')
         this.setState({session: true})
+    }*/
+
+    handleCallback = (childData) =>{
+        //this.setState({data: childData})
+       // alert(childData)
+       console.log(childData);
     }
+
+
+   
+
 
     render() {
         return (
             <div id="login">
 
-                <div>
-                    <button onClick={this.showsession}>xx</button>
-                    {(this.state.session == true)?
-                    <div>
-                        <Session/>
-                    </div>:
-                    null
-                    }
-                </div>
-
                 { //Check if message failed
-                                    (sessionStorage.getItem('studentId') == null)
+                // (sessionStorage.getItem('studentId') == null)
+                                    (sessionStorage.getItem('token') == null)
                                         ? <div>
                                             <div className="col-md-3 m-auto" >
                                                 <div className="m-3">

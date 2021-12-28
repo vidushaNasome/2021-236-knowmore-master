@@ -5,6 +5,7 @@ import {
     DisplaySchoolAPI,
     DisplayStudentsAPI,
     DisplayTeachersAPI, userreactionAPI,
+    validity,
 } from "../configs/config";
 import {Link} from "react-router-dom";
 import s1 from "../Images/usersimages/avatar1.jpg"
@@ -14,6 +15,10 @@ import PropTypes from "prop-types";
 import {share_my_knowledge} from "../configs/config3";
 import {Button, Form} from "react-bootstrap";
 import {FaCodeBranch, FaComment, FaFacebookMessenger, FaRegCommentAlt, FaSkype, FaStar} from "react-icons/fa";
+import {authAxios} from "../configs/config";
+import { isExpired, decodeToken } from "react-jwt";
+import {tokenValidation} from '../configs/config'; 
+
 
 class MainPage extends Component {
     static get propTypes() {
@@ -30,8 +35,15 @@ class MainPage extends Component {
             my_knowledge:'',
             clicks:0,
             citations:0,
+            token:sessionStorage.getItem('token'),
+            secret:'false',
         }
         this.my_knowledge_share=this.my_knowledge_share.bind(this);
+        console.log('helloooooo');
+        console.log(validity);
+
+        this.checkSession=this.checkSession.bind(this);
+        this.checkSession();
     }
 
     componentDidMount() {
@@ -126,6 +138,34 @@ class MainPage extends Component {
 
     }*/
 
+    async checkSession(){
+       
+        const de_token  = decodeToken(this.state.token);
+        const ex_token  = isExpired(this.state.token);
+        //alert('checking......'+ de_token);
+        console.log(de_token);
+        console.log(ex_token);
+
+      if(de_token !== null){
+
+        await authAxios.get(tokenValidation+'?id='+de_token.studentId)
+        .then(response => {
+         console.log(response);
+         this.setState({secret:response.data.validation});
+         //alert(this.state.secret);
+     
+        })
+        .catch(function (error) {
+            console.log(error);
+ 
+ 
+        })
+
+      }
+
+
+    }
+
 
 
     render() {
@@ -133,6 +173,10 @@ class MainPage extends Component {
         return (
             <div className="mainpage1">
                 <br/>
+                {this.state.secret === 'true'? 
+                
+                <div>
+
                 <div align="center">
                     <h2 id="word3">Newsfeed</h2>
                 </div>
@@ -224,6 +268,14 @@ class MainPage extends Component {
                 </div>
 
                 <br/><br/>
+
+
+                                </div>
+                                :<div align="center">
+                                    <h3> Something Went Wrong... Please re-open the browser.</h3>
+                                </div>
+                                }
+                
             </div>
         );
     }

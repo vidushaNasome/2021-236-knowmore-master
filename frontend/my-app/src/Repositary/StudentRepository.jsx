@@ -4,6 +4,7 @@ import {Button, Form} from "react-bootstrap";
 import axios from "axios";
 import {
     DisplayStudentsAPI,
+    DisplayStudent_ch,
     repositaryclustercreationAPI,
     repositarysessioncreationAPI,
     repositarytopiccreationAPI
@@ -12,6 +13,7 @@ import {Link} from "react-router-dom";
 import not from "../Images/Icons_navigation/not.png";
 import {Tooltip} from "@varld/popover";
 import Clusterusers from "./users/Clusterusers";
+import {authAxios} from "../configs/config";
 
 class StudentRepository extends Component {
 
@@ -55,9 +57,11 @@ class StudentRepository extends Component {
         let mc='';
         let array_clusters_id='';
 
-        await axios.get(DisplayStudentsAPI+sessionStorage.getItem('studentId'))
+        await authAxios.get(DisplayStudent_ch+'?id='+sessionStorage.getItem('studentId'))
             .then(response => {
-                mc =response.data.clusterIds
+                console.log('clusters');
+                console.log(response.data.clusters)
+                mc =response.data.clusters
                 array_clusters_id = mc.split(',');
                 this.setState({  mycluster: array_clusters_id});
 
@@ -241,10 +245,10 @@ class StudentRepository extends Component {
                                                                                                                         <br/>
                                                                                                                         {l3cat.id}
                                                                                                                         {l3cat.sessionname}&nbsp;&nbsp;
-                                                                                                                        <Link to={"/cluster"+"/?k="+l3cat.id+'&n='+l2cat.topicname+"&y="+l1cat.clustername+"&x="+l1cat.id+"&tid="+l2cat.id} id="bt4" style={{  textDecoration: 'none' }}>
+                                                                                                                        <Link to={"/cluster"+"/?k="+l3cat.id+'&n='+l2cat.topicname+"&y="+l1cat.clustername+"&x="+l1cat.id+"&tid="+l2cat.id}  target="_blank" id="bt4" style={{  textDecoration: 'none' }}>
                                                                                                                             Navigate to Page
                                                                                                                         </Link>&nbsp;&nbsp;
-                                                                                                                        <Link to={"/scoreboard"+"/?k="+l3cat.id+'&n='+l2cat.topicname+"&y="+l1cat.clustername+"&cid="+l1cat.id+"&tid="+l2cat.id} id="bt4" style={{  textDecoration: 'none' }}>
+                                                                                                                        <Link to={"/scoreboard"+"/?k="+l3cat.id+'&n='+l2cat.topicname+"&y="+l1cat.clustername+"&cid="+l1cat.id+"&tid="+l2cat.id} target="_blank" id="bt4" style={{  textDecoration: 'none' }}>
                                                                                                                             Score Board
                                                                                                                         </Link>
                                                                                                                         <br/>

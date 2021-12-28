@@ -9,6 +9,7 @@
     "@varld/popover": "^0.1.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "jwt-encode": "^1.0.1",
     "konva": "^8.0.2",
     "mdbreact": "latest",
     "query-string": "^7.0.1",

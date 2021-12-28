@@ -8,9 +8,9 @@ from .views import CategoriesViewSet, StudentAsUserViewSet, MyClassMatesViewSet,
 from .views_getsessiondata import filter_session_reaction_heart_count, filter_session_reaction_angry_count, \
     filter_session_reaction_cry_count, filter_session_reaction_like_count, filter_session_reaction_for_each_user, \
     filter_session_additionallinks_for_each_user, filter_session_comments_for_each_user, \
-    filter_session_videoview_for_each_user
+    filter_session_videoview_for_each_user,user_specified_clusters
 
-from .login_view import jwt_token_login
+from .login_view import jwt_token_login, jwt_token_validation, jwt_get_token
 
 router = routers.DefaultRouter()
 router.register('Categories', CategoriesViewSet, 'Categories')
@@ -37,6 +37,9 @@ urlpatterns = [
     # path('user_knowledgebase',filter_session_knowledgebase_for_each_user, name='user_knowledgebase'),
     path('user_videoview', filter_session_videoview_for_each_user, name='user_videoview'),
     path('token', jwt_token_login, name='token'),
+    path('validation', jwt_token_validation, name='validation'),
+    path('token_retrieve', jwt_get_token, name='token_retrieve'),
+    path('retrieve_clusters', user_specified_clusters, name='retrieve_clusters'),
 
 
 ]

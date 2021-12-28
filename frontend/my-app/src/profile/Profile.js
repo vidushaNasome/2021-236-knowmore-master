@@ -138,7 +138,7 @@ class Profile extends Component {
 
                 <br/> <br/>
 
-
+                {/*post and ask questions */}
                 <div id="CreateaPost">
 
                     <h5> Create a Post</h5>

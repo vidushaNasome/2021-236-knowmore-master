@@ -46,6 +46,7 @@ class StudentsAsUser(models.Model):
     image = models.ImageField(upload_to='Userimages', blank=True, null=True)
     clusterIds = models.CharField(max_length=250, blank=True, null=True)
     membersince = models.IntegerField(blank=True, null=True)
+    secret = models.CharField(blank=True,null=True,max_length=250)
 
     def __str__(self):
         return self.name

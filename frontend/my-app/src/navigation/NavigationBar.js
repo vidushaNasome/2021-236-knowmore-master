@@ -15,6 +15,7 @@ import repo from "../Images/Icons_navigation/repositary.png";
 import not from "../Images/Icons_navigation/not.png";
 import bookmark from "../Images/Icons_navigation/bookmark.png";
 import { Tooltip } from '@varld/popover';
+import {displayAPI} from "../configs/config";
 
 
 
@@ -101,7 +102,7 @@ function NavigationBar() {
                         </div>
                         :<div id="logged1">
                             <Link to="/profile" id="nn" style={{  textDecoration: 'none' }}>
-                                <h6> <img src={sessionStorage.getItem("image")} id="im_pro" alt="profile" />
+                                <h6> <img src={displayAPI+ sessionStorage.getItem("image")} id="im_pro" alt="profile" />
                                     &nbsp;&nbsp; {sessionStorage.getItem("Username")}</h6>
                             </Link>
                         </div>}
