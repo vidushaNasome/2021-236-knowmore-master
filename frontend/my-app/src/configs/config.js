@@ -32,6 +32,9 @@ const gettoken = `${apiBaseUrl}students/token_retrieve`;
 
 //teachers
 const DisplayTeachersAPI = `${apiBaseUrl}teachers/teachers/`;
+const tokenteachersAPI = `${apiBaseUrl}teachers/token`;
+const gettoken_teachers = `${apiBaseUrl}teachers/token_retrieve`;
+const tokenValidation_teachers=`${apiBaseUrl}teachers/validation`;
 
 //School
 const DisplaySchoolAPI = `${apiBaseUrl}school/School/`;
@@ -159,4 +162,7 @@ export{
     validity,
     gettoken,
     DisplayStudent_ch,
+    tokenteachersAPI,
+    gettoken_teachers,
+    tokenValidation_teachers
 }

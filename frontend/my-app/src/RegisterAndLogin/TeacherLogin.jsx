@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBModalFooter } from 'mdbreact';
 import './login.css';
 import axios from "axios";
-import {DisplayTeachersAPI} from "../configs/config";
+import  {tokenteachersAPI} from "../configs/config";
 import FirstPage from "../components/FirstPage";
 import MainPage from "../components/MainPage";
+import { isExpired, decodeToken } from "react-jwt";
 
 class TeacherLogin extends Component {
 
@@ -29,16 +30,43 @@ class TeacherLogin extends Component {
         this.name = this.state.name;
         this.password = this.state.password;
 
-        //alert(this.name+this.password)
-        ///?name=Ben&pw=1234
-        // alert(DisplayStudentsAPI+'?name='+this.name+'&pw='+this.password)
+        await axios.get( tokenteachersAPI+'?name='+this.name+'&pw='+this.password)
+            .then(response => {
+                console.log(response.data.token);
+                //this.setState({ MeStudent: response.data});
+                //console.log(this.state.MeStudent)
+                if(response.data.token !== 'Incorrect Username or Password') {
+                    sessionStorage.setItem("token", response.data.token)
+                    const decode_t = decodeToken(response.data.token);
+                    sessionStorage.setItem("Username", decode_t.Username)
+
+                    const str =decode_t.image
+                    console.log(str)
+                    sessionStorage.setItem("image", str.slice(1,-1))
+                    sessionStorage.setItem("teacherId", decode_t.teacherId)
+                    window.location.reload();
+
+
+                }else{
+                    alert('Incorrect Username or Password!');
+                }
+
+
+            })
+            .catch(function (error) {
+                console.log(error);
+
+
+            })
+       /* e.preventDefault();
+        this.name = this.state.name;
+        this.password = this.state.password;
         axios.get(DisplayTeachersAPI+'?name='+this.name+'&pw='+this.password)
             .then(response => {
                 this.setState({ MeStudent: response.data});
                 console.log(this.state.MeStudent)
                 if(response.data !== null && response.data.length !== 0) {
                     sessionStorage.setItem("Username", this.name)
-                    //sessionStorage.setItem("studentId", this.state.MeStudent[0].id)
                     sessionStorage.setItem("teacherId", this.state.MeStudent[0].id)
                     sessionStorage.setItem("image", this.state.MeStudent[0].image)
                     window.location.reload();
@@ -50,7 +78,7 @@ class TeacherLogin extends Component {
                 console.log(error);
 
 
-            })
+            })*/
 
         window.localStorage.setItem('REQUESTING_SHARED_CREDENTIALS', Date.now().toString())
         window.localStorage.removeItem('REQUESTING_SHARED_CREDENTIALS')

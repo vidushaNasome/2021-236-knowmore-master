@@ -17,7 +17,7 @@ import {Button, Form} from "react-bootstrap";
 import {FaCodeBranch, FaComment, FaFacebookMessenger, FaRegCommentAlt, FaSkype, FaStar} from "react-icons/fa";
 import {authAxios} from "../configs/config";
 import { isExpired, decodeToken } from "react-jwt";
-import {tokenValidation} from '../configs/config'; 
+import {tokenValidation,tokenValidation_teachers} from '../configs/config'; 
 
 
 class MainPage extends Component {
@@ -146,13 +146,30 @@ class MainPage extends Component {
         console.log(de_token);
         console.log(ex_token);
 
-      if(de_token !== null){
+      if(de_token !== null && sessionStorage.getItem('studentId') !== null){
 
         await authAxios.get(tokenValidation+'?id='+de_token.studentId)
         .then(response => {
          console.log(response);
          this.setState({secret:response.data.validation});
          //alert(this.state.secret);
+     
+        })
+        .catch(function (error) {
+            console.log(error);
+ 
+ 
+        })
+
+      }else if(de_token !== null && sessionStorage.getItem('teacherId') !== null){
+
+        //alert('teaher');
+        console.log(de_token)
+        await authAxios.get(tokenValidation_teachers+'?id='+de_token.teacherId)
+        .then(response => {
+         console.log(response);
+         this.setState({secret:response.data.validation});
+        
      
         })
         .catch(function (error) {
@@ -199,8 +216,10 @@ class MainPage extends Component {
                                                     {(m1.color === 'No')?
                                                         <div className="feedNo">
                                                             <div>
+                                                                {console.log('displaying M1')}
+                                                                {console.log(m1)}
                                                                 <Link to={"/viewprofile/"} style={{  textDecoration: 'none' }}>
-                                                                    <img id="cm_im" src={this.state.MeStudent.image}/> &nbsp; &nbsp; {this.state.MeStudent.name}
+                                                                    <img id="cm_im" src={m1.imageurl}/> &nbsp; &nbsp; {m1.username}
                                                                 </Link>
                                                             </div>
                                                             <br/>
@@ -218,7 +237,7 @@ class MainPage extends Component {
                                                                 <div className="feedDesign">
                                                                     <div>
                                                                         <Link to={"/viewprofile/"} style={{  textDecoration: 'none' }}>
-                                                                            <img id="cm_im" src={this.state.MeStudent.image}/> &nbsp; &nbsp; {this.state.MeStudent.name}
+                                                                            <img id="cm_im" src={m1.imageurl}/> &nbsp; &nbsp; {m1.username}
                                                                         </Link>
                                                                     </div>
                                                                     <br/>
@@ -236,7 +255,7 @@ class MainPage extends Component {
                                                                         <div className="feedColor">
                                                                             <div>
                                                                                 <Link to={"/viewprofile/"+m1.userid} style={{  textDecoration: 'none' }}>
-                                                                                    <img id="cm_im" src={this.state.MeStudent.image}/> &nbsp; &nbsp; {this.state.MeStudent.name}
+                                                                                    <img id="cm_im" src={m1.imageurl}/> &nbsp; &nbsp; {m1.username}
                                                                                 </Link>
                                                                             </div>
                                                                             <br/>

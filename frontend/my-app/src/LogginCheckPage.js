@@ -3,7 +3,7 @@ import FirstPage from "./components/FirstPage";
 import NotloggenInPage from "./RegisterAndLogin/NotloggenInPage";
 import { isExpired, decodeToken } from "react-jwt";
 import axios from "axios";
-import {tokenValidation} from './configs/config'; 
+import {tokenValidation,tokenValidation_teachers} from './configs/config'; 
 import {authAxios} from "./configs/config";
 
 
@@ -22,25 +22,41 @@ class LogginCheckPage extends Component {
 
         this.checkSession();
 
-        //sessionStorage.setItem('token','');
-
 
     }
     async checkSession(){
        
         const de_token  = decodeToken(this.state.token);
         const ex_token  = isExpired(this.state.token);
-        //alert('checking......'+ de_token);
+        
         console.log(de_token);
         console.log(ex_token);
 
-      if(de_token !== null){
+      if(de_token !== null && sessionStorage.getItem('studentId') !== null){
 
+        //alert('student');
         await authAxios.get(tokenValidation+'?id='+de_token.studentId)
         .then(response => {
          console.log(response);
          this.setState({secret:response.data.validation});
-         //alert(this.state.secret);
+        
+     
+        })
+        .catch(function (error) {
+            console.log(error);
+ 
+ 
+        })
+
+      }else if(de_token !== null && sessionStorage.getItem('teacherId') !== null){
+
+        //alert('teaher');
+        console.log(de_token)
+        await authAxios.get(tokenValidation_teachers+'?id='+de_token.teacherId)
+        .then(response => {
+         console.log(response);
+         this.setState({secret:response.data.validation});
+        
      
         })
         .catch(function (error) {
