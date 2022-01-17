@@ -8,4 +8,5 @@ pytesseract
 pymongo
 nltk
 whitenoise
-PyJWT
+PyJWT // PyJW
+stanford-openie
