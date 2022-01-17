@@ -8,3 +8,6 @@ venv/
 .venv/
 .venv
 /media
+.env
+.env/
+../env

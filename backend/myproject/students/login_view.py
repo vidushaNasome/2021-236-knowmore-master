@@ -1,11 +1,12 @@
 ##Need to add returning a jwt token
 from django.http import JsonResponse
-import jwt
+
 from rest_framework.decorators import api_view
 from .models import StudentsAsUser 
 import json
 from django.core.serializers.json import DjangoJSONEncoder
 import random
+import jwt
 
 @api_view(['GET'])
 def jwt_token_login(request, name=None, pw=None):
